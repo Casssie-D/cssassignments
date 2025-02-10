@@ -1,56 +1,82 @@
-/* General */
+/* Define CSS Variables for Reusability */
+:root {
+    --primary-color: #00b894;
+    --primary-hover: #008f72;
+    --secondary-color: #2c72b5;
+    --text-color: #333;
+    --light-bg: #f5fdf8;
+    --card-bg: white;
+    --border-color: #ccc;
+    --nav-text: #444;
+}
+
+/* General Styles */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5fdf8; /* Light green background */
-    color: #333;
+    background-color: var(--light-bg);
+    color: var(--text-color);
 }
 
+/* Homepage Card */
 .card.homepage {
-    position: absolute;
-    top: 100px;  /* Increase this value to move it further down */
-    left: 20px; /* Keep it aligned to the left */
-    padding: 10px 15px;
-    background: white;
-    border-radius: 5px;
+    position: relative;
+    margin: 20px;
+    padding: 0.8rem 1rem;
+    background: var(--card-bg);
+    border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
 }
 
 /* Header */
 header {
-    background-color: #fff;
-    padding: 15px 20px;
+    background-color: var(--card-bg);
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Navigation */
 nav a {
-    margin-right: 15px;
-    color: #555;
+    margin-right: 1rem;
+    color: var(--nav-text);
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--primary-color);
+    outline: none;
 }
 
 nav button {
     background-color: #ddd;
     border: none;
-    padding: 5px 10px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav button:hover {
+    background-color: #bbb;
 }
 
 /* Checkout Section */
 .container {
     display: flex;
     max-width: 900px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
+    margin: 3rem auto;
+    background: var(--card-bg);
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -58,66 +84,77 @@ nav button {
 /* Form Section */
 .checkout-form {
     flex: 2;
-    padding-right: 20px;
+    padding-right: 1rem;
 }
 
 h2, h3 {
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .input-group {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 input {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
+    font-size: 1rem;
 }
 
+/* Buy Button */
 .buy-btn {
     width: 100%;
-    background-color: #00b894;
+    background-color: var(--primary-color);
     color: white;
-    padding: 12px;
+    padding: 0.8rem;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-.buy-btn:hover {
-    background-color: #008f72;
+.buy-btn:hover,
+.buy-btn:focus {
+    background-color: var(--primary-hover);
+    outline: none;
 }
 
+/* Help Text */
 .help-text {
-    font-size: 12px;
+    font-size: 0.8rem;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.5rem;
 }
 
 a {
-    color: #00b894;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Pricing Section */
 .pricing-summary {
     flex: 1;
-    background-color: #2c72b5; /* Blue section */
+    background-color: var(--secondary-color);
     color: white;
-    padding: 20px;
+    padding: 1.5rem;
     border-radius: 10px;
 }
 
 .pricing-summary h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .pricing-summary span {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 ul {
@@ -126,27 +163,34 @@ ul {
 }
 
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 0.8rem;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
 }
 
 footer a {
-    color: #00b894;
+    color: var(--primary-color);
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        padding: 1rem;
     }
 
     .checkout-form {
         padding-right: 0;
+    }
+
+    .card.homepage {
+        position: relative;
+        margin: 10px;
+        text-align: center;
     }
 }
