@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5fdf8; /* Light green background */
+    color: #333;
+}
+
+.card.homepage {
+    position: absolute;
+    top: 20px;  /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    padding: 10px 15px;
+    background: white; /* Box background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border: 1px solid #ccc; /* Light border */
+    font-weight: bold;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Section */
+.info {
+    flex: 1;
+    padding: 20px;
+}
+
+.info img {
+    width: 50px;
+}
+
+.info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Form */
+.form {
+    flex: 1;
+    padding: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group input, .input-group select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    background-color: #00b894; /* Green */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008f72;
+}
+
+p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    color: #00b894;
+}
+
+/* Responsive Design */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info, .form {
+        width: 100%;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .input-group input, .input-group select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

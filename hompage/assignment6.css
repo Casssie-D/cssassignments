@@ -1,0 +1,450 @@
+/* General Styles */
+body {
+    font-family: 'times new roman', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f9ff;   
+}
+
+.card.homepage {
+    position: absolute;
+    top: 1px;  /* Increase this value to move it further down */
+    left: 10px; /* Keep it aligned to the left */
+    padding: 10px 15px;
+    background: #f4f9ff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #f4f9ff;
+}
+
+.logo {
+    font-size: 24px; /* Adjust the size of the logo */
+    color: #004aad; /* Change the color of the logo */
+    font-weight: bold; /* Make the logo text bold */
+    margin-right: 5px; /* Add some space to the right of the logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-primary {
+    background: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: none;
+    border: 2px solid #004aad;
+    color: #004aad;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Blue text highlight */
+.blue-text {
+    color: #0056ff;
+    font-weight: bold;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust the height as needed */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+    background: #eef3f8;
+}
+
+.link-transformation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: linear-gradient(to bottom, #fefefe, #f4f6f8); /* Brighter gradient */
+    padding: 60px 20px;
+    position: relative;
+}
+
+/* Floating Effect */
+.link-transformation::before {
+    content: "";
+    position: absolute;
+    bottom: 5%;
+    width: 80%;
+    height: 100px;
+    background: rgba(55, 41, 41, 0.152);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+/* Main Box */
+.transformation-box {
+    background: white;
+    padding: 20px; /* Adjust padding for better spacing */
+    border-radius: 0px; /*remove round corners*/
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adds slight depth */
+    text-align: center;
+    max-width: 650px;
+    border: 1px solid #004aad; /* Adjust color and thickness as needed */
+    position: relative;
+    z-index: 1;
+    width: 80%; /* Adjust width as needed */
+    margin: auto; /* Center the box */
+}
+
+.stage {
+    width: 80%; /* Adjust width as needed */
+    height: 30px; /* Adjust height for thickness */
+    background: rgba(0, 0, 0, 0.05); /* Light gray background */
+    border-radius: 50%; /* Smooth oval shape */
+    position: absolute;
+    bottom: -20px; /* Adjust spacing below the box */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Creates floating effect */
+}
+
+/* Image */
+.transformation-box img {
+    width: 100%;
+    max-width: 320px;
+}
+
+/* Text */
+.transformation-box p {
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.hero h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.stats div {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.why-choose h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.icon {
+    font-size: 32px;
+    color: #0056ff;
+    margin-bottom: 10px;
+}
+
+/* Pricing Section */
+.pricing {
+    text-align: center;
+    padding: 40px 20px;
+    background: #eef3f8;
+}
+
+.pricing h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* Pricing Section */
+.pricing {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.blue-text {
+    color: #004aad;
+    font-weight: bold;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pricing-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.professional {
+    background: #004aad;
+    color: white;
+}
+
+.pricing-box h3 {
+    font-size: 18px;
+}
+
+.pricing-box h2 {
+    font-size: 24px;
+}
+
+.pricing-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-box ul li {
+    margin: 10px 0;
+}
+
+.pricing-buttons {
+    display: flex !important;
+    flex-direction: row;
+    gap: 10px;  
+    justify-content: center;
+    padding: 15px;
+}
+.button-container {
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column; /* Aligns buttons in a row */
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-outline {
+    background: none;
+    border: 2px solid #004aad;
+    color: #004aad;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+text-align: center;
+}
+
+/* URL Shortener Section */
+.url-shortener {
+    background: linear-gradient(to right, #003366, #004aad);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.url-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+}
+
+.url-input, .url-select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.terms-text {
+    font-size: 12px;
+    color: #666;
+}
+
+.terms-text a {
+    color: #004aad;
+    text-decoration: none;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+.faq-container {
+    margin-top: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+    background: #004aad;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+}
+
+.footer-content .btn {
+    background: white;
+    color: #004aad;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
